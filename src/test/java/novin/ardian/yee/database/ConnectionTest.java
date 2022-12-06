@@ -27,7 +27,7 @@ public class ConnectionTest {
 
     @Test
     void testConnection() {
-        String jdbcUrl = "jdbc:mysql://localhost:3306/uinsa";
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mahasiswa";
         String username = "root";
         String password = "";
 
@@ -44,7 +44,7 @@ public class ConnectionTest {
 
     @Test
     void testConnectionClose() {
-        String jdbcUrl = "jdbc:mysql://localhost:3306/uinsa";
+        String jdbcUrl = "jdbc:mysql://localhost:3306/mahasiswa";
         String username = "root";
         String password = "";
         try (Connection connection = DriverManager.getConnection(jdbcUrl, username, password)) {

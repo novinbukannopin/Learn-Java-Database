@@ -27,13 +27,13 @@ public class ResultSetTest {
                 """;
 
         String sqlSelect = """
-                SELECT * FROM customers
+                SELECT * FROM mhs
                 """;
         ResultSet resultSet = statement.executeQuery(sqlSelect);
         while (resultSet.next()) {
-            String id = resultSet.getString("id");
-            String name = resultSet.getString("name");
-            String email = resultSet.getString("email");
+            String id = resultSet.getString("nim");
+            String name = resultSet.getString("nama");
+            String email = resultSet.getString("alamat");
 
             System.out.println(String.join(", ", id, name, email));
         }

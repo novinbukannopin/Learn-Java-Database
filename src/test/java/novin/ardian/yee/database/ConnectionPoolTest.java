@@ -17,7 +17,7 @@ public class ConnectionPoolTest {
     void testHikariCP() {
         HikariConfig config = new HikariConfig();
         config.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        config.setJdbcUrl("jdbc:mysql://localhost:3306/uinsa");
+        config.setJdbcUrl("jdbc:mysql://localhost:3306/mahasiswa");
         config.setUsername("root");
         config.setPassword("");
 

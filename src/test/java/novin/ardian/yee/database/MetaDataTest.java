@@ -16,7 +16,7 @@ public class MetaDataTest {
         DatabaseMetaData databaseMetaData = connection.getMetaData();
 
         System.out.println(databaseMetaData.getDatabaseProductName());
-        ResultSet resultSet = databaseMetaData.getTables("uinsa", null, null, null);
+        ResultSet resultSet = databaseMetaData.getTables("mahasiswa", null, null, null);
         while (resultSet.next()) {
             String tableName = resultSet.getString("TABLE_NAME");
             System.out.println(tableName);
@@ -40,7 +40,7 @@ public class MetaDataTest {
     void testResultSetMetaData() throws SQLException {
         Connection connection = ConnectionUtil.getDataSource().getConnection();
         Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery("SELECT * FROM customers");
+        ResultSet resultSet = statement.executeQuery("SELECT * FROM mhs");
 
         ResultSetMetaData resultSetMetaData = resultSet.getMetaData();
         System.out.println(resultSetMetaData.getColumnCount());

@@ -27,12 +27,13 @@ public class StatementTest {
         Statement statement = connection.createStatement();
 
         String sqlInsert = """
-                INSERT INTO customers(id, name, email) 
-                VALUES ('eko', 'Eko', 'eko@jdbc.com')
+                INSERT INTO mhs(nim, nama, alamat) 
+                VALUES ('09020621039', 'Novin', 'novin@jdbc.com')
                 """;
 
         String sqlUpdateWhere = """
-                DELETE FROM customers where id = 'eko'
+                UPDATE mhs SET nim = '097', nama = 'lord', alamat = 'lamongan'
+                WHERE nim = '09020621039'
                 """;
         int update = statement.executeUpdate(sqlInsert);
         System.out.println(update);

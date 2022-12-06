@@ -12,6 +12,7 @@ public class AutoIncreamentTest {
 
     @Test
     void autoIncrement() throws SQLException {
+        
         Connection connection = ConnectionUtil.getDataSource().getConnection();
         String sql = "INSERT INTO comments(email, comment) VALUES (?,?)";
         PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
